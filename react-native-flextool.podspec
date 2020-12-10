@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage = package['homepage']
   s.license = package['license']
   s.author = package['author']
-  s.source = { :git => 'https://github.com/fjtrujy/react-native-flipboard-flex.git', :tag => s.version }
+  s.source = { :git => 'https://github.com/choongjoey/react-native-flextool.git', :tag => s.version }
 
   s.platform = :ios, '9.0'
   s.ios.deployment_target = '8.0'
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source_files  = "ios/**/*.{h,m}"
 
   s.dependency 'React'
-  s.dependency 'FLEX'
+  s.dependency 'FLEX', '~> 4.0'
 
 end
 
