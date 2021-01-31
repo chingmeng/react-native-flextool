@@ -7,10 +7,7 @@
 //
 
 #import "RNFlipboardFlex.h"
-
-#if FLEX_ENABLED
 #import "FLEXManager.h"
-#endif
 
 @implementation RNFlipboardFlex
 
@@ -19,29 +16,23 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(showExplorer)
 {
-    #if FLEX_ENABLED
     dispatch_async(dispatch_get_main_queue(), ^{
         [[FLEXManager sharedManager] showExplorer];
     });
-    #endif
 }
 
 RCT_EXPORT_METHOD(hideExplorer)
 {
-    #if FLEX_ENABLED
     dispatch_async(dispatch_get_main_queue(), ^{
         [[FLEXManager sharedManager] hideExplorer];
     });
-    #endif
 }
 
 RCT_EXPORT_METHOD(toggleExplorer)
 {
-    #if FLEX_ENABLED
     dispatch_async(dispatch_get_main_queue(), ^{
         [[FLEXManager sharedManager] toggleExplorer];
     });
-    #endif
 }
 
 @end
