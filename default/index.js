@@ -1,6 +1,6 @@
 
 
-module.export = {
+export default {
     showExplorer: () => {},
     hideExplorer: () => {},
     toggleExplorer: () => {},

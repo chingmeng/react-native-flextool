@@ -1,11 +1,7 @@
 
 import { NativeModules } from 'react-native';
 
-let { RNFlipboardFlex } = NativeModules;
+const { RNFlipboardFlex } = NativeModules;
+const RNFlipboardFlexFallback = require('./default').default;
 
-if (!RNFlipboardFlex) {
-    RNFlipboardFlex = require('./default');
-}
-
-export default RNFlipboardFlex;
-    
+export default RNFlipboardFlex || RNFlipboardFlexFallback;
